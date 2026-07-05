@@ -603,10 +603,6 @@
                         showView('home');
                         renderHome();
                         break;
-                    case 'works':
-                        showView('works');
-                        renderWorks();
-                        break;
                     case 'authors':
                         showView('authors');
                         renderAuthors();
@@ -626,9 +622,6 @@
         // Search handlers
         document.getElementById('home-search').addEventListener('input', function() {
             renderHome(this.value);
-        });
-        document.getElementById('works-search').addEventListener('input', function() {
-            renderWorks(this.value);
         });
         document.getElementById('authors-search').addEventListener('input', function() {
             renderAuthors(this.value);
