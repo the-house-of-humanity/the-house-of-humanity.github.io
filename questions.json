@@ -1,0 +1,62 @@
+[
+  {
+    "examName": "UPSC CSE Pre",
+    "year": 2026,
+    "questionType": "MCQ",
+    "question": "Among the four main forms of existence of life recognized in Jainism, which one of the following is not included?",
+    "options": [
+      "Deva (Gods)",
+      "Yaksha (Demi-Gods)",
+      "Manushya (Humans)",
+      "Tiryancha"
+    ],
+    "correctOptionIndex": 1,
+    "solution": "Yaksha (Demi-Gods) are not included",
+    "explanation": "The four Gati (forms of rebirth) are-\nDeva Gati\nManushya Gati\nTiryancha Gati\nNarka Gati",
+    "references": [],
+    "createdAt": "2026-07-17T16:18:07.593Z",
+    "id": 153
+  },
+  {
+    "examName": "UPSC CSE Pre",
+    "year": 2026,
+    "questionType": "MCQ",
+    "question": "The Hallisalasaya painting in Bagh Caves represents :",
+    "options": [
+      "A joyous folk dance",
+      "Buddha in a meditative pose",
+      "The depiction ofKalidasa and Parwati on Kalidasa",
+      "Samudramanthan"
+    ],
+    "correctOptionIndex": 0,
+    "solution": "Four women performing folk dance",
+    "explanation": "In ancient Sanskrit \"The dance that is performed in a circle (mandala) is called Hallisaka.\"[ref:1]",
+    "references": [
+      {
+        "title": "10th-century Sanskrit scholar Abhinavagupta in his work, the Abhinavabharati",
+        "url": "",
+        "description": ""
+      }
+    ],
+    "createdAt": "2026-07-17T21:15:20.476Z",
+    "id": 154
+  },
+  {
+    "examName": "UPSC CSE Pre",
+    "year": 2026,
+    "questionType": "MCQ",
+    "question": "Which one of the following statements about the Eka Movement and Bardoli Satyagraha is correct ?",
+    "options": [
+      "The Eka Movement was throughout supported and organized by the Congress while Bardoli Satyagraha was initially independent of Congress influence and was only in the last stages supported by the Congress.",
+      "The Eka Movement was provided leadership by the taluqdars of Awad, whereas the Bardoli Satyagrah was a movement of landless labours",
+      "The Bardoli Satyagraha was a campaign against the enhancement of land revenue, while the Eka Movement was a protest against excessive extraction of rents.",
+      "The Eka Movement was located in the Varanasi and Mirzapur districts of the present-day U.P., while the Bardoli Satyagraha took place in Saurashtra."
+    ],
+    "correctOptionIndex": 2,
+    "solution": "(c) is correct.\n(a) Eka Moment grew out of NCM but quickly became independent while Bardoli movement was lead by Sardar Patel\n(b) Eka movement was against taliqdars not lead by them while Satyagrah was lead by land-owning peseants",
+    "explanation": "",
+    "references": [],
+    "createdAt": "2026-07-18T04:27:11.041Z",
+    "id": 155
+  }
+]

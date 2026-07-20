@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYQ Bank — Previous Year Question Bank | Search & Browse</title>
+    <meta name="description" content="PYQ Bank is a comprehensive, searchable repository of previous year exam questions. Browse, filter, and study MCQs and essay questions for UPSC, SSC, and other competitive exams.">
+    <meta name="keywords" content="PYQ, previous year questions, question bank, exam preparation, UPSC, SSC, MCQs, essay questions, competitive exams, study material">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="PYQ Bank">
+    <link rel="canonical" href="https://pyqbank.github.io/">
+    <meta property="og:title" content="PYQ Bank — Previous Year Question Bank">
+    <meta property="og:description" content="Browse and search previous year exam questions. Filter by exam, year, and question type. Your go-to study companion for competitive exams.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pyqbank.github.io/">
+    <meta property="og:site_name" content="PYQ Bank">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PYQ Bank — Previous Year Question Bank">
+    <meta name="twitter:description" content="Searchable repository of previous year exam questions. Filter by exam, year, and type. Ideal for competitive exam preparation.">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "PYQ Bank",
+            "description": "A searchable repository of previous year exam questions for competitive exam preparation.",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "All",
+            "url": "https://pyqbank.github.io/",
+            "browserRequirements": "Requires JavaScript"
+        }
+    </script>
+    <style>
+        :root {
+            --bg: #f1f5f9;
+            --surface: #ffffff;
+            --surface2: #f8fafc;
+            --border: #e2e8f0;
+            --text: #1e293b;
+            --text2: #64748b;
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --success: #16a34a;
+            --success-light: #f0fdf4;
+            --danger: #dc2626;
+            --danger-light: #fef2f2;
+            --warning: #d97706;
+            --gold: #b45309;
+            --radius: 8px;
+            --radius-sm: 5px;
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+            --transition: 0.2s ease;
+            --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 10px;
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            z-index: 300;
+            font-weight: 600;
+            text-decoration: none;
+            transition: top 0.3s;
+        }
+        .skip-link:focus {
+            top: 10px;
+        }
+        .header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        .header .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+            white-space: nowrap;
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .header .logo span {
+            color: var(--text2);
+            font-weight: 400;
+            font-size: 0.78rem;
+            letter-spacing: 0.5px;
+        }
+        .header .spacer {
+            flex: 1;
+            min-width: 20px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text);
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all var(--transition);
+            font-family: var(--font);
+            text-decoration: none;
+        }
+        .btn:hover {
+            background: var(--surface2);
+            border-color: #cbd5e1;
+        }
+        .btn:active {
+            transform: scale(0.97);
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background: #1d4ed8;
+            border-color: #1d4ed8;
+        }
+        .btn-success {
+            background: var(--success);
+            color: #fff;
+            border-color: var(--success);
+        }
+        .btn-success:hover {
+            background: #15803d;
+        }
+        .btn-danger {
+            background: var(--danger);
+            color: #fff;
+            border-color: var(--danger);
+        }
+        .btn-danger:hover {
+            background: #b91c1c;
+        }
+        .btn-warning {
+            background: var(--warning);
+            color: #fff;
+            border-color: var(--warning);
+        }
+        .btn-warning:hover {
+            background: #b45309;
+        }
+        .btn-outline-gold {
+            background: transparent;
+            color: var(--gold);
+            border-color: var(--gold);
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .btn-outline-gold:hover {
+            background: #fffbeb;
+            border-color: #92400e;
+            color: #92400e;
+        }
+        .btn-sm {
+            padding: 5px 10px;
+            font-size: 0.78rem;
+            gap: 3px;
+        }
+        .btn-xs {
+            padding: 3px 8px;
+            font-size: 0.7rem;
+            border-radius: 3px;
+            gap: 2px;
+        }
+        .btn:disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .admin-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fcd34d;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            animation: pulseBadge 2s infinite;
+        }
+        @keyframes pulseBadge {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(217, 119, 6, 0);
+            }
+        }
+        .admin-only {
+            display: none !important;
+        }
+        body.admin-authenticated .admin-only {
+            display: inline-flex !important;
+        }
+        body.admin-authenticated .admin-only.block-admin {
+            display: flex !important;
+        }
+        body.admin-authenticated .admin-only.inline-admin {
+            display: inline !important;
+        }
+        .search-wrap {
+            position: relative;
+            flex: 1;
+            min-width: 160px;
+            max-width: 300px;
+        }
+        .search-wrap input {
+            width: 100%;
+            padding: 8px 12px 8px 34px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            font-size: 0.875rem;
+            background: var(--surface2);
+            font-family: var(--font);
+            transition: all var(--transition);
+        }
+        .search-wrap input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+            background: #fff;
+        }
+        .search-wrap .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text2);
+            pointer-events: none;
+            font-size: 0.9rem;
+        }
+        .main-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 260px;
+            min-width: 220px;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            padding: 10px 0;
+            flex-shrink: 0;
+            max-height: calc(100vh - 60px);
+            position: sticky;
+            top: 60px;
+            align-self: flex-start;
+        }
+        .sidebar .section-title {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text2);
+            padding: 8px 16px;
+            font-weight: 700;
+        }
+        .sidebar .group-list {
+            list-style: none;
+        }
+        .sidebar .exam-group-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 9px 16px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all var(--transition);
+            user-select: none;
+            color: var(--text);
+            gap: 6px;
+        }
+        .sidebar .exam-group-header:hover {
+            background: var(--surface2);
+        }
+        .sidebar .exam-group-header .arrow {
+            font-size: 0.6rem;
+            transition: transform var(--transition);
+            color: var(--text2);
+            flex-shrink: 0;
+        }
+        .sidebar .exam-group.open .exam-group-header .arrow {
+            transform: rotate(90deg);
+        }
+        .sidebar .year-list {
+            list-style: none;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease;
+        }
+        .sidebar .exam-group.open .year-list {
+            max-height: 600px;
+        }
+        .sidebar .year-item,
+        .sidebar .type-item,
+        .sidebar .all-item {
+            padding: 7px 16px 7px 32px;
+            cursor: pointer;
+            font-size: 0.82rem;
+            color: var(--text2);
+            transition: all var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-left: 3px solid transparent;
+        }
+        .sidebar .year-item:hover,
+        .sidebar .type-item:hover,
+        .sidebar .all-item:hover {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+        .sidebar .year-item.active,
+        .sidebar .type-item.active,
+        .sidebar .all-item.active {
+            background: var(--primary-light);
+            color: var(--primary);
+            font-weight: 600;
+            border-left-color: var(--primary);
+        }
+        .sidebar .count {
+            font-size: 0.7rem;
+            background: var(--border);
+            color: var(--text2);
+            padding: 2px 7px;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+        .sidebar .active .count {
+            background: #bfdbfe;
+            color: var(--primary);
+        }
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px 24px;
+            max-height: calc(100vh - 60px);
+        }
+        .content-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .content-header h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .content-header .result-count {
+            font-size: 0.8rem;
+            color: var(--text2);
+        }
+        .question-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 10px;
+            box-shadow: var(--shadow);
+            transition: all var(--transition);
+            overflow: hidden;
+        }
+        .question-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+        .question-card .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            cursor: pointer;
+            user-select: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: background var(--transition);
+            flex-wrap: wrap;
+        }
+        .question-card .card-header:hover {
+            background: var(--surface2);
+        }
+        .question-card .q-preview {
+            flex: 1;
+            min-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .badge {
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            white-space: nowrap;
+            letter-spacing: 0.2px;
+        }
+        .badge-exam {
+            background: #ede9fe;
+            color: #6d28d9;
+        }
+        .badge-year {
+            background: #fce7f3;
+            color: #be185d;
+        }
+        .badge-type {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .card-header .collapse-icon {
+            font-size: 0.7rem;
+            transition: transform var(--transition);
+            color: var(--text2);
+            flex-shrink: 0;
+        }
+        .question-card.expanded .card-header .collapse-icon {
+            transform: rotate(180deg);
+        }
+        .question-card .card-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 16px;
+            border-top: 0px solid var(--border);
+        }
+        .question-card.expanded .card-body {
+            max-height: 3000px;
+            padding: 14px 16px;
+            border-top: 1px solid var(--border);
+        }
+        .question-card .card-body .question-text {
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .options-list {
+            list-style: none;
+            margin-bottom: 12px;
+        }
+        .options-list li {
+            padding: 8px 12px;
+            margin: 4px 0;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            font-size: 0.88rem;
+            transition: all var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .options-list li.correct-option {
+            background: var(--success-light);
+            border-color: #86efac;
+            font-weight: 600;
+            color: #14532d;
+        }
+        .options-list li.correct-option::before {
+            content: '✓';
+            font-weight: 700;
+            color: var(--success);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        .options-list li:not(.correct-option)::before {
+            content: '○';
+            color: var(--text2);
+            flex-shrink: 0;
+            font-size: 0.8rem;
+        }
+        .detail-section {
+            margin-top: 10px;
+            padding: 12px;
+            background: var(--surface2);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+        }
+        .detail-section h4 {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text2);
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+        .detail-section .detail-content {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        .detail-section .detail-content sup {
+            color: var(--primary);
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.75rem;
+        }
+        .detail-section .detail-content sup:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+        .ref-list {
+            margin-top: 8px;
+            padding: 0;
+            list-style: none;
+        }
+        .ref-list li {
+            padding: 6px 10px;
+            margin: 3px 0;
+            font-size: 0.8rem;
+            background: #fff;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+        .ref-list .ref-num {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.7rem;
+            min-width: 18px;
+            flex-shrink: 0;
+        }
+        .ref-list a {
+            color: var(--primary);
+            word-break: break-all;
+            font-size: 0.78rem;
+        }
+        .ref-list .ref-desc {
+            color: var(--text2);
+            font-size: 0.75rem;
+        }
+        .card-actions {
+            display: flex;
+            gap: 6px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .pagination .page-btn {
+            padding: 7px 13px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: var(--surface);
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all var(--transition);
+            font-family: var(--font);
+        }
+        .pagination .page-btn:hover {
+            background: var(--surface2);
+        }
+        .pagination .page-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+            font-weight: 700;
+        }
+        .pagination .page-info {
+            font-size: 0.8rem;
+            color: var(--text2);
+            padding: 0 8px;
+        }
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.55);
+            z-index: 200;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 30px 16px;
+            overflow-y: auto;
+            animation: fadeIn 0.2s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .modal {
+            background: var(--surface);
+            border-radius: var(--radius);
+            width: 100%;
+            max-width: 750px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            animation: slideUp 0.25s ease;
+            flex-shrink: 0;
+            margin: auto;
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: var(--surface);
+            border-radius: var(--radius) var(--radius) 0 0;
+            z-index: 5;
+        }
+        .modal-header h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .modal-body {
+            padding: 20px;
+            max-height: 65vh;
+            overflow-y: auto;
+        }
+        .modal-body .form-group {
+            margin-bottom: 14px;
+        }
+        .modal-body label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.82rem;
+            margin-bottom: 4px;
+            color: var(--text);
+            letter-spacing: 0.2px;
+        }
+        .modal-body input[type="text"],
+        .modal-body input[type="number"],
+        .modal-body input[type="password"],
+        .modal-body textarea,
+        .modal-body select {
+            width: 100%;
+            padding: 9px 12px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            font-size: 0.88rem;
+            font-family: var(--font);
+            background: var(--surface2);
+            resize: vertical;
+        }
+        .modal-body textarea {
+            min-height: 70px;
+        }
+        .modal-body input:focus,
+        .modal-body textarea:focus,
+        .modal-body select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.07);
+            background: #fff;
+        }
+        .modal-body .option-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+        .modal-body .option-row input[type="text"] {
+            flex: 1;
+        }
+        .modal-body .option-row input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--success);
+            flex-shrink: 0;
+        }
+        .modal-body .option-row .opt-label {
+            font-size: 0.75rem;
+            color: var(--text2);
+            min-width: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        .ref-entry {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 6px;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 8px;
+            background: var(--surface2);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+        }
+        .ref-entry input {
+            flex: 1;
+            min-width: 100px;
+            padding: 6px 10px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            font-size: 0.8rem;
+            font-family: var(--font);
+            background: #fff;
+        }
+        .ref-entry .ref-num-label {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.75rem;
+            min-width: 20px;
+        }
+        .insert-ref-btns {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+        .insert-ref-btns .btn-xs {
+            font-size: 0.68rem;
+            padding: 3px 7px;
+        }
+        .form-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .form-row .form-group {
+            flex: 1;
+            min-width: 140px;
+        }
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #1e293b;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 500;
+            z-index: 999;
+            animation: slideUp 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .password-modal {
+            max-width: 400px;
+        }
+        .password-modal .modal-body {
+            text-align: center;
+            padding: 30px 24px;
+        }
+        .password-modal .lock-icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+        }
+        .password-modal .error-msg {
+            color: var(--danger);
+            font-size: 0.82rem;
+            min-height: 20px;
+            margin-top: 6px;
+            font-weight: 500;
+        }
+        .loading-spinner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+            color: var(--text2);
+            font-size: 1rem;
+            gap: 10px;
+        }
+        .loading-spinner .spinner {
+            width: 28px;
+            height: 28px;
+            border: 3px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                max-height: none;
+                position: static;
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                padding: 8px 0;
+            }
+            .main-container {
+                flex-direction: column;
+            }
+            .content {
+                max-height: none;
+                padding: 12px;
+            }
+            .header {
+                padding: 10px 12px;
+                gap: 8px;
+            }
+            .modal {
+                max-width: 98%;
+                margin: 10px auto;
+            }
+            .modal-body {
+                max-height: 55vh;
+            }
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .header .logo {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#contentArea" class="skip-link">Skip to content</a>
+
+    <header class="header" role="banner">
+        <div class="logo">📚 PYQ Bank <span>| Previous Year Questions</span></div>
+        <div class="spacer"></div>
+        <div class="search-wrap">
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input type="text" id="searchInput" placeholder="Search questions..." autocomplete="off" aria-label="Search questions">
+        </div>
+        <button class="btn btn-primary admin-only" id="btnAddQuestion">＋ Add Question</button>
+        <button class="btn admin-only" id="btnExport">📥 Export JSON</button>
+        <button class="btn admin-only" id="btnImport">📤 Import JSON</button>
+        <button class="btn btn-sm admin-only btn-warning" id="btnClearAllData">🗑️ Clear All</button>
+        <button class="btn btn-sm" id="btnClearFilters">🔄 All</button>
+        <button class="btn btn-sm btn-outline-gold" id="btnAdminLogin" title="Admin Access">🔒 Admin</button>
+        <span class="admin-badge admin-only inline-admin" id="adminBadge">🛡️ Admin Mode</span>
+        <button class="btn btn-sm btn-danger admin-only" id="btnAdminLogout">🚪 Logout</button>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar" id="sidebar" role="navigation" aria-label="Filter questions">
+            <div class="section-title">📁 Exam Groups</div>
+            <div class="all-item active" data-filter="all" id="filterAll">📋 All Questions <span class="count" id="totalCountAll">(0)</span></div>
+            <ul class="group-list" id="groupList"></ul>
+            <div class="section-title" style="margin-top:12px;">📝 Question Type</div>
+            <div class="type-item" data-filter="type" data-type="MCQ">🔘 Multiple Choice <span class="count" id="countMCQ">(0)</span></div>
+            <div class="type-item" data-filter="type" data-type="Essay">📄 Essay <span class="count" id="countEssay">(0)</span></div>
+        </aside>
+
+        <main class="content" id="contentArea" role="main" aria-label="Questions">
+            <div class="content-header">
+                <h2 id="contentTitle">All Questions</h2>
+                <span class="result-count" id="resultCount"></span>
+            </div>
+            <div id="questionsContainer">
+                <div class="loading-spinner"><div class="spinner"></div> Loading questions…</div>
+            </div>
+            <div class="pagination" id="paginationContainer"></div>
+        </main>
+    </div>
+
+    <!-- Question Edit Modal -->
+    <div class="modal-overlay" id="modalOverlay" style="display:none;">
+        <div class="modal" id="modalBox">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add Question</h3>
+                <button class="btn btn-sm" id="btnCloseModal">✕ Close</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Password Modal -->
+    <div class="modal-overlay" id="passwordModalOverlay" style="display:none;">
+        <div class="modal password-modal" id="passwordModalBox">
+            <div class="modal-header">
+                <h3>🔐 Admin Access</h3>
+                <button class="btn btn-sm" id="btnClosePasswordModal">✕ Close</button>
+            </div>
+            <div class="modal-body">
+                <div class="lock-icon">🔒</div>
+                <p style="margin-bottom:16px;color:var(--text2);">Enter the admin password to manage questions.</p>
+                <input type="password" id="passwordInput" placeholder="Enter password…" autocomplete="off" aria-label="Admin password">
+                <div class="error-msg" id="passwordError"></div>
+                <button class="btn btn-primary" id="btnSubmitPassword" style="margin-top:14px;width:100%;justify-content:center;">🔓 Unlock Admin</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toastContainer"></div>
+    <input type="file" id="importFileInput" accept=".json" style="display:none;">
+
+    <script>
+        (function() {
+            // ==================== CONFIGURATION ====================
+            const DATA_URL = 'questions.json'; // Path to JSON file (relative to this HTML file)
+            const ADMIN_PASSWORD = 'Asscracker@2000';
+            const SITE_NAME = 'PYQ Bank';
+            const PAGE_SIZE = 25;
+            const SESSION_KEY = 'pyqbank_admin_authenticated';
+            const CACHE_KEY = 'pyqbank_questions_cache';
+
+            // ==================== STATE ====================
+            let questions = [];
+            let isAdmin = false;
+            let currentFilter = { examName: null, year: null, questionType: null };
+            let currentPage = 1;
+            let currentSearch = '';
+            let editingQuestionId = null;
+            let nextId = 1;
+
+            // ==================== DOM REFERENCES ====================
+            const $ = (id) => document.getElementById(id);
+            const questionsContainer = $('questionsContainer');
+            const contentTitle = $('contentTitle');
+            const resultCount = $('resultCount');
+            const paginationContainer = $('paginationContainer');
+            const groupList = $('groupList');
+            const searchInput = $('searchInput');
+            const modalOverlay = $('modalOverlay');
+            const modalTitle = $('modalTitle');
+            const modalBody = $('modalBody');
+            const passwordModalOverlay = $('passwordModalOverlay');
+            const passwordInput = $('passwordInput');
+            const passwordError = $('passwordError');
+            const toastContainer = $('toastContainer');
+            const importFileInput = $('importFileInput');
+            const totalCountAll = $('totalCountAll');
+            const countMCQ = $('countMCQ');
+            const countEssay = $('countEssay');
+            const filterAll = $('filterAll');
+            const adminBadge = $('adminBadge');
+
+            // ==================== HELPERS ====================
+            function escapeHTML(str) {
+                const div = document.createElement('div');
+                div.textContent = str;
+                return div.innerHTML;
+            }
+
+            function renderTextWithRefs(text, references) {
+                if (!text) return '';
+                let html = escapeHTML(text).replace(/\n/g, '<br>');
+                html = html.replace(/\[ref:(\d+)\]/g, (match, num) => {
+                    const refIdx = parseInt(num) - 1;
+                    const ref = references && refIdx >= 0 && refIdx < references.length ? references[refIdx] :
+                        null;
+                    const title = ref ? escapeHTML(ref.title || 'Reference ' + num) : 'Reference ' + num;
+                    const url = ref ? escapeHTML(ref.url || '') : '';
+                    if (url) return `<sup title="${title}" style="cursor:pointer;" onclick="event.stopPropagation();window.open('${url}','_blank')">[${num}]</sup>`;
+                    return `<sup title="${title}">[${num}]</sup>`;
+                });
+                return html;
+            }
+
+            function showToast(msg, dur = 2500) {
+                const t = document.createElement('div');
+                t.className = 'toast';
+                t.textContent = msg;
+                toastContainer.appendChild(t);
+                setTimeout(() => { t.style.opacity = '0';
+                    t.style.transition = 'opacity 0.3s';
+                    setTimeout(() => t.remove(), 300); }, dur);
+            }
+
+            const debounce = (fn, delay) => { let timer; return function(...args) { clearTimeout(timer);
+                    timer = setTimeout(() => fn.apply(this, args), delay); }; };
+
+            function getMaxId() {
+                let max = 0;
+                questions.forEach(q => { if (q.id && q.id > max) max = q.id; });
+                return max;
+            }
+
+            function generateId() {
+                const max = getMaxId();
+                const id = Math.max(nextId, max + 1);
+                nextId = id + 1;
+                return id;
+            }
+
+            // ==================== DATA LOADING ====================
+            async function loadQuestionsFromJSON() {
+                try {
+                    const response = await fetch(DATA_URL);
+                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                    const data = await response.json();
+                    if (Array.isArray(data)) {
+                        questions = data;
+                        nextId = getMaxId() + 1;
+                        localStorage.setItem(CACHE_KEY, JSON.stringify(data));
+                        console.log(`📥 Loaded ${questions.length} questions from ${DATA_URL}`);
+                    } else {
+                        throw new Error('Invalid JSON format');
+                    }
+                } catch (err) {
+                    console.warn('⚠️ Could not load JSON file:', err.message);
+                    const cached = localStorage.getItem(CACHE_KEY);
+                    if (cached) {
+                        try {
+                            questions = JSON.parse(cached);
+                            nextId = getMaxId() + 1;
+                            console.log(`📦 Loaded ${questions.length} questions from local cache`);
+                        } catch (e) {
+                            questions = [];
+                        }
+                    } else {
+                        questions = [];
+                    }
+                    if (questions.length === 0) {
+                        showToast('ℹ️ No question data found. Admin users can add questions and export the JSON file.',
+                            5000);
+                    }
+                }
+            }
+
+            function saveCache() {
+                try {
+                    localStorage.setItem(CACHE_KEY, JSON.stringify(questions));
+                } catch (e) { /* quota exceeded, ignore */ }
+            }
+
+            // ==================== AUTH ====================
+            function checkSessionAuth() {
+                const val = sessionStorage.getItem(SESSION_KEY);
+                return val === 'true';
+            }
+
+            function setAuthenticated(authenticated) {
+                isAdmin = authenticated;
+                if (authenticated) {
+                    sessionStorage.setItem(SESSION_KEY, 'true');
+                    document.body.classList.add('admin-authenticated');
+                } else {
+                    sessionStorage.removeItem(SESSION_KEY);
+                    document.body.classList.remove('admin-authenticated');
+                }
+                updateAdminUI();
+            }
+
+            function updateAdminUI() {
+                // Re-render current page to show/hide edit/delete buttons on cards
+                loadQuestions(currentPage);
+                // Toggle admin badge
+                if (isAdmin) {
+                    adminBadge.style.display = 'inline-flex';
+                } else {
+                    adminBadge.style.display = 'none';
+                }
+                // The CSS handles .admin-only elements via body class
+            }
+
+            function openPasswordModal() {
+                passwordInput.value = '';
+                passwordError.textContent = '';
+                passwordModalOverlay.style.display = 'flex';
+                setTimeout(() => passwordInput.focus(), 150);
+            }
+
+            function closePasswordModal() {
+                passwordModalOverlay.style.display = 'none';
+            }
+
+            function submitPassword() {
+                const entered = passwordInput.value;
+                if (entered === ADMIN_PASSWORD) {
+                    setAuthenticated(true);
+                    closePasswordModal();
+                    showToast('✅ Admin access granted. You can now manage questions.');
+                    loadQuestions(currentPage);
+                    refreshSidebar();
+                } else {
+                    passwordError.textContent = '❌ Incorrect password. Please try again.';
+                    passwordInput.value = '';
+                    passwordInput.focus();
+                    passwordInput.style.borderColor = 'var(--danger)';
+                    setTimeout(() => { passwordInput.style.borderColor = 'var(--border)'; }, 1500);
+                }
+            }
+
+            function logout() {
+                if (confirm('Exit admin mode? Your unsaved changes in memory will remain until you refresh.')) {
+                    setAuthenticated(false);
+                    showToast('🔒 Admin mode deactivated.');
+                    loadQuestions(currentPage);
+                    refreshSidebar();
+                }
+            }
+
+            // ==================== CRUD ====================
+            function addQuestion(data) {
+                const id = generateId();
+                const q = { ...data, id, createdAt: data.createdAt || new Date().toISOString() };
+                questions.push(q);
+                saveCache();
+                return id;
+            }
+
+            function updateQuestion(id, data) {
+                const idx = questions.findIndex(q => q.id === id);
+                if (idx === -1) throw new Error('Question not found');
+                questions[idx] = { ...data, id, createdAt: questions[idx].createdAt || new Date().toISOString() };
+                saveCache();
+            }
+
+            function deleteQuestion(id) {
+                const idx = questions.findIndex(q => q.id === id);
+                if (idx === -1) return;
+                questions.splice(idx, 1);
+                saveCache();
+            }
+
+            function getQuestion(id) {
+                return questions.find(q => q.id === id) || null;
+            }
+
+            function getFilteredQuestions() {
+                let filtered = [...questions];
+                if (currentFilter.examName) filtered = filtered.filter(q => q.examName === currentFilter
+                    .examName);
+                if (currentFilter.year !== null) filtered = filtered.filter(q => q.year === currentFilter.year);
+                if (currentFilter.questionType) filtered = filtered.filter(q => (q.questionType || 'MCQ') ===
+                    currentFilter.questionType);
+                if (currentSearch.trim()) {
+                    const term = currentSearch.trim().toLowerCase();
+                    filtered = filtered.filter(q => {
+                        const allText = (q.question || '') + ' ' + (q.solution || '') + ' ' + (q.explanation ||
+                            '') + ' ' + (q.options || []).join(' ');
+                        return allText.toLowerCase().includes(term);
+                    });
+                }
+                return filtered;
+            }
+
+            function getExamYearGroups() {
+                const map = new Map();
+                for (const q of questions) {
+                    const key = q.examName + '|||' + q.year;
+                    if (!map.has(key)) map.set(key, { examName: q.examName, year: q.year, count: 0 });
+                    map.get(key).count++;
+                }
+                const examMap = new Map();
+                for (const [, val] of map) {
+                    if (!examMap.has(val.examName)) examMap.set(val.examName, { examName: val.examName, years: [],
+                        totalCount: 0 });
+                    const exam = examMap.get(val.examName);
+                    exam.years.push({ year: val.year, count: val.count });
+                    exam.totalCount += val.count;
+                }
+                const groups = [];
+                for (const [, exam] of examMap) { exam.years.sort((a, b) => b.year - a.year);
+                    groups.push(exam); }
+                groups.sort((a, b) => a.examName.localeCompare(b.examName));
+                return groups;
+            }
+
+            function getTypeCounts() {
+                const cnt = { MCQ: 0, Essay: 0 };
+                questions.forEach(q => { const t = q.questionType || 'MCQ'; if (cnt[t] !== undefined) cnt[t]++;
+                    else cnt[t] = 1; });
+                return cnt;
+            }
+
+            // ==================== RENDER ====================
+            function renderQuestionCard(q, idx) {
+                const card = document.createElement('div');
+                card.className = 'question-card';
+                card.setAttribute('data-id', q.id);
+                const preview = q.question ? (q.question.length > 90 ? q.question.substring(0, 90) + '…' : q.question) :
+                    '(No question text)';
+                const type = q.questionType || 'MCQ';
+                const isMCQ = type === 'MCQ';
+                const optionsHTML = isMCQ ? `
+                <ul class="options-list">
+                    ${(q.options||[]).map((o,i)=>`<li class="${i===q.correctOptionIndex?'correct-option':''}">${escapeHTML(o)}</li>`).join('')}
+                </ul>` : '';
+                const adminActionsHTML = isAdmin ? `
+                <div class="card-actions">
+                    <button class="btn btn-sm" onclick="event.stopPropagation(); window._editQuestion(${q.id})">✏️ Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="event.stopPropagation(); window._deleteQuestionConfirm(${q.id})">🗑 Delete</button>
+                </div>` : '';
+                card.innerHTML = `
+                <div class="card-header" onclick="this.closest('.question-card').classList.toggle('expanded')" role="button" aria-expanded="false" tabindex="0">
+                    <span style="font-weight:700;color:var(--primary);font-size:0.8rem;">#${idx+1}</span>
+                    <span class="badge badge-exam">${escapeHTML(q.examName||'N/A')}</span>
+                    <span class="badge badge-year">${q.year||'N/A'}</span>
+                    <span class="badge badge-type">${escapeHTML(type)}</span>
+                    <span class="q-preview">${escapeHTML(preview)}</span>
+                    <span class="collapse-icon">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="question-text">${escapeHTML(q.question||'')}</div>
+                    ${optionsHTML}
+                    ${q.solution?`<div class="detail-section"><h4>💡 Solution</h4><div class="detail-content">${renderTextWithRefs(q.solution, q.references||[])}</div></div>`:''}
+                    ${q.explanation?`<div class="detail-section"><h4>📝 Detailed Explanation</h4><div class="detail-content">${renderTextWithRefs(q.explanation, q.references||[])}</div></div>`:''}
+                    ${(q.references&&q.references.length)?`<div class="detail-section"><h4>📖 References</h4><ul class="ref-list">${q.references.map((r,i)=>`<li><span class="ref-num">[${i+1}]</span><strong>${escapeHTML(r.title||'')}</strong> ${r.url?`<a href="${escapeHTML(r.url)}" target="_blank" rel="noopener">${escapeHTML(r.url)}</a>`:''} ${r.description?`<span class="ref-desc">— ${escapeHTML(r.description)}</span>`:''}</li>`).join('')}</ul></div>`:''}
+                    ${adminActionsHTML}
+                </div>`;
+                return card;
+            }
+
+            function loadQuestions(page = 1) {
+                currentPage = page;
+                const filtered = getFilteredQuestions();
+                const total = filtered.length;
+                const totalPages = Math.ceil(total / PAGE_SIZE) || 1;
+                if (currentPage > totalPages) { currentPage = totalPages; return loadQuestions(currentPage); }
+                const offset = (page - 1) * PAGE_SIZE;
+                const data = filtered.slice(offset, offset + PAGE_SIZE);
+
+                let title = 'All Questions';
+                if (currentFilter.examName && currentFilter.year !== null) title =
+                    `${currentFilter.examName} — ${currentFilter.year}`;
+                else if (currentFilter.examName) title = currentFilter.examName;
+                else if (currentFilter.year !== null) title = `Year: ${currentFilter.year}`;
+                if (currentFilter.questionType) title += ` (${currentFilter.questionType})`;
+                if (currentSearch) title += ` search: "${currentSearch}"`;
+                contentTitle.textContent = title;
+                resultCount.textContent = `${total} question(s)`;
+
+                questionsContainer.innerHTML = '';
+                if (data.length === 0) {
+                    questionsContainer.innerHTML =
+                        '<p style="color:var(--text2);text-align:center;padding:40px;">No questions match the current filters.</p>';
+                } else {
+                    data.forEach((q, i) => questionsContainer.appendChild(renderQuestionCard(q, offset + i)));
+                }
+                renderPagination(totalPages, currentPage);
+            }
+
+            function renderPagination(totalPages, activePage) {
+                paginationContainer.innerHTML = '';
+                if (totalPages <= 1) return;
+                const max = 7;
+                let start = Math.max(1, activePage - Math.floor(max / 2)),
+                    end = Math.min(totalPages, start + max - 1);
+                if (end - start < max - 1) start = Math.max(1, end - max + 1);
+                const prev = document.createElement('button');
+                prev.className = 'page-btn';
+                prev.textContent = '← Prev';
+                prev.disabled = activePage === 1;
+                prev.onclick = () => loadQuestions(activePage - 1);
+                paginationContainer.appendChild(prev);
+                if (start > 1) { const b = document.createElement('button');
+                    b.className = 'page-btn';
+                    b.textContent = '1';
+                    b.onclick = () => loadQuestions(1);
+                    paginationContainer.appendChild(b); if (start > 2) { const dots = document.createElement('span');
+                        dots.className = 'page-info';
+                        dots.textContent = '…';
+                        paginationContainer.appendChild(dots); } }
+                for (let p = start; p <= end; p++) { const btn = document.createElement('button');
+                    btn.className = 'page-btn' + (p === activePage ? ' active' : '');
+                    btn.textContent = p;
+                    btn.onclick = () => loadQuestions(p);
+                    paginationContainer.appendChild(btn); }
+                if (end < totalPages) { if (end < totalPages - 1) { const dots = document.createElement('span');
+                        dots.className = 'page-info';
+                        dots.textContent = '…';
+                        paginationContainer.appendChild(dots); } const last = document.createElement('button');
+                    last.className = 'page-btn';
+                    last.textContent = totalPages;
+                    last.onclick = () => loadQuestions(totalPages);
+                    paginationContainer.appendChild(last); }
+                const next = document.createElement('button');
+                next.className = 'page-btn';
+                next.textContent = 'Next →';
+                next.disabled = activePage === totalPages;
+                next.onclick = () => loadQuestions(activePage + 1);
+                paginationContainer.appendChild(next);
+                const info = document.createElement('span');
+                info.className = 'page-info';
+                info.textContent = `Page ${activePage} of ${totalPages}`;
+                paginationContainer.appendChild(info);
+            }
+
+            async function refreshSidebar() {
+                const groups = getExamYearGroups();
+                let totalAll = 0;
+                groups.forEach(g => totalAll += g.totalCount);
+                totalCountAll.textContent = `(${totalAll})`;
+                groupList.innerHTML = '';
+                groups.forEach(g => {
+                    const li = document.createElement('li');
+                    li.className = 'exam-group';
+                    li.innerHTML =
+                        `<div class="exam-group-header"><span>📘 ${escapeHTML(g.examName)}</span><span style="font-size:0.7rem;color:var(--text2);">(${g.totalCount})</span><span class="arrow">▶</span></div>
+                        <ul class="year-list">${g.years.map(y=>`<li class="year-item" data-exam="${escapeHTML(g.examName)}" data-year="${y.year}">📅 ${y.year} <span class="count">${y.count}</span></li>`).join('')}</ul>`;
+                    li.querySelector('.exam-group-header').addEventListener('click', (e) => { e.stopPropagation();
+                        li.classList.toggle('open'); });
+                    li.querySelectorAll('.year-item').forEach(item => item.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const exam = item.dataset.exam,
+                            year = parseInt(item.dataset.year);
+                        setFilter(exam, year, null);
+                    }));
+                    groupList.appendChild(li);
+                });
+                const typeCounts = getTypeCounts();
+                countMCQ.textContent = `(${typeCounts.MCQ||0})`;
+                countEssay.textContent = `(${typeCounts.Essay||0})`;
+                updateSidebarActive();
+            }
+
+            function updateSidebarActive() {
+                document.querySelectorAll('.sidebar .year-item,.type-item,.all-item').forEach(el => el.classList.remove(
+                    'active'));
+                if (!currentFilter.examName && currentFilter.year === null && !currentFilter.questionType) filterAll
+                    .classList.add('active');
+                else filterAll.classList.remove('active');
+                if (currentFilter.questionType) document.querySelectorAll('.type-item').forEach(el => { if (el.dataset
+                        .type === currentFilter.questionType) el.classList.add('active'); });
+                document.querySelectorAll('.sidebar .year-item').forEach(el => {
+                    if (el.dataset.exam === currentFilter.examName && parseInt(el.dataset.year) === currentFilter
+                        .year) {
+                        el.classList.add('active');
+                        const parent = el.closest('.exam-group');
+                        if (parent) parent.classList.add('open');
+                    }
+                });
+            }
+
+            function setFilter(examName, year, questionType) {
+                currentFilter.examName = examName;
+                currentFilter.year = year;
+                currentFilter.questionType = questionType;
+                currentPage = 1;
+                currentSearch = '';
+                searchInput.value = '';
+                updateSidebarActive();
+                loadQuestions(1);
+            }
+
+            // ==================== MODAL (Question Edit) ====================
+            function openModal(title, questionData = null) {
+                if (!isAdmin) { openPasswordModal(); return; }
+                modalTitle.textContent = title;
+                editingQuestionId = questionData ? questionData.id : null;
+                let defaults = { examName: '', year: new Date().getFullYear(), questionType: 'MCQ', question: '',
+                    options: ['', '', '', ''], correctOptionIndex: 0, solution: '', explanation: '', references: [] };
+                if (!questionData && questions.length > 0) {
+                    const last = questions[questions.length - 1];
+                    defaults.examName = last.examName || '';
+                    defaults.year = last.year || new Date().getFullYear();
+                    defaults.questionType = last.questionType || 'MCQ';
+                }
+                const data = questionData || defaults;
+                if (!data.options || data.options.length < 4) { const opts = data.options || []; while (opts.length < 4) opts
+                        .push('');
+                    data.options = opts; }
+                modalBody.innerHTML = buildFormHTML(data);
+                modalOverlay.style.display = 'flex';
+                attachFormEvents(data);
+            }
+
+            function closeModal() { modalOverlay.style.display = 'none';
+                editingQuestionId = null;
+                modalBody.innerHTML = ''; }
+
+            function buildFormHTML(data) {
+                const refs = data.references || [],
+                    opts = data.options || [],
+                    correctIdx = data.correctOptionIndex ?? 0,
+                    type = data.questionType || 'MCQ';
+                let optsHTML = '';
+                opts.forEach((o, i) => { optsHTML +=
+                        `<div class="option-row"><span class="opt-label">${String.fromCharCode(65+i)}</span><input type="text" class="option-input" data-index="${i}" value="${escapeHTML(o)}" placeholder="Option ${String.fromCharCode(65+i)}…"><input type="radio" name="correctOption" value="${i}" ${i===correctIdx?'checked':''} title="Correct answer"><button type="button" class="btn btn-xs btn-danger remove-option-btn" data-index="${i}" ${opts.length<=2?'disabled':''}>✕</button></div>`; });
+                let refsHTML = '';
+                refs.forEach((r, i) => { refsHTML +=
+                        `<div class="ref-entry" data-ref-index="${i}"><span class="ref-num-label">[${i+1}]</span><input type="text" class="ref-title-input" value="${escapeHTML(r.title||'')}" placeholder="Title"><input type="text" class="ref-url-input" value="${escapeHTML(r.url||'')}" placeholder="URL"><input type="text" class="ref-desc-input" value="${escapeHTML(r.description||'')}" placeholder="Description"><button type="button" class="btn btn-xs btn-danger remove-ref-btn" data-index="${i}">✕</button></div>`; });
+                return `
+                <div class="form-row">
+                    <div class="form-group"><label>Exam Name</label><input type="text" id="formExamName" value="${escapeHTML(data.examName||'')}" placeholder="e.g., UPSC CSE" list="examSuggestions"><datalist id="examSuggestions"></datalist></div>
+                    <div class="form-group"><label>Year</label><input type="number" id="formYear" value="${data.year||new Date().getFullYear()}" min="1900" max="2100"></div>
+                    <div class="form-group"><label>Question Type</label><select id="formQuestionType"><option value="MCQ" ${type==='MCQ'?'selected':''}>Multiple Choice (MCQ)</option><option value="Essay" ${type==='Essay'?'selected':''}>Essay</option></select></div>
+                </div>
+                <div class="form-group"><label>Question</label><textarea id="formQuestion" rows="2">${escapeHTML(data.question||'')}</textarea></div>
+                <div class="form-group" id="optionsGroup" style="display:${type==='MCQ'?'block':'none'}"><label>Options (mark correct)</label><div id="optionsContainer">${optsHTML}</div><button type="button" class="btn btn-sm" id="btnAddOption">＋ Add Option</button></div>
+                <div class="form-group"><label>Solution</label><textarea id="formSolution" rows="3">${escapeHTML(data.solution||'')}</textarea><div class="insert-ref-btns" id="insertRefBtnsSolution"></div></div>
+                <div class="form-group"><label>Detailed Explanation</label><textarea id="formExplanation" rows="4">${escapeHTML(data.explanation||'')}</textarea><div class="insert-ref-btns" id="insertRefBtnsExplanation"></div></div>
+                <div class="form-group"><label>References</label><div id="refsContainer">${refsHTML||'<p style="color:var(--text2);font-size:0.8rem;">No references added.</p>'}</div><button type="button" class="btn btn-sm" id="btnAddRef">＋ Add Reference</button></div>
+                <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:16px;"><button type="button" class="btn" id="btnCancelForm">Cancel</button><button type="button" class="btn btn-success" id="btnSaveForm">💾 Save</button></div>`;
+            }
+
+            function attachFormEvents(data) {
+                const optContainer = document.getElementById('optionsContainer');
+                const refContainer = document.getElementById('refsContainer');
+                const btnAddOpt = document.getElementById('btnAddOption');
+                const btnAddRef = document.getElementById('btnAddRef');
+                const btnSave = document.getElementById('btnSaveForm');
+                const btnCancel = document.getElementById('btnCancelForm');
+                const formExam = document.getElementById('formExamName');
+                const formSol = document.getElementById('formSolution');
+                const formExpl = document.getElementById('formExplanation');
+                const formType = document.getElementById('formQuestionType');
+                populateExamSuggestions();
+
+                function toggleOptionsVisibility() { document.getElementById('optionsGroup').style.display = formType
+                        .value === 'MCQ' ? 'block' : 'none'; }
+                formType.addEventListener('change', toggleOptionsVisibility);
+
+                function getOptCount() { return optContainer.querySelectorAll('.option-row').length; }
+
+                function getRefCount() { return refContainer.querySelectorAll('.ref-entry').length; }
+
+                function updateRemoveBtns() { optContainer.querySelectorAll('.option-row').forEach(row => { const btn =
+                            row.querySelector('.remove-option-btn'); if (btn) btn.disabled = getOptCount() <=
+                        2; }); }
+
+                function refreshInsertRefBtns() {
+                    const cnt = getRefCount();
+                    const solBtns = document.getElementById('insertRefBtnsSolution'),
+                        explBtns = document.getElementById('insertRefBtnsExplanation');
+                    if (solBtns) { solBtns.innerHTML = cnt > 0 ?
+                            '<span style="font-size:0.7rem;color:var(--text2);">Insert ref: </span>' : ''; for (let i =
+                                1; i <= cnt; i++) { const b = document.createElement('button');
+                            b.type = 'button';
+                            b.className = 'btn btn-xs';
+                            b.textContent = `[ref:${i}]`;
+                            b.onclick = () => insertAtCursor(formSol, `[ref:${i}]`);
+                            solBtns.appendChild(b); } }
+                    if (explBtns) { explBtns.innerHTML = cnt > 0 ?
+                            '<span style="font-size:0.7rem;color:var(--text2);">Insert ref: </span>' : ''; for (let i =
+                                1; i <= cnt; i++) { const b = document.createElement('button');
+                            b.type = 'button';
+                            b.className = 'btn btn-xs';
+                            b.textContent = `[ref:${i}]`;
+                            b.onclick = () => insertAtCursor(formExpl, `[ref:${i}]`);
+                            explBtns.appendChild(b); } }
+                }
+
+                function insertAtCursor(ta, text) { const start = ta.selectionStart,
+                        end = ta.selectionEnd;
+                    ta.value = ta.value.substring(0, start) + text + ta.value.substring(end);
+                    ta.selectionStart = ta.selectionEnd = start + text.length;
+                    ta.focus(); }
+                btnAddOpt.onclick = () => {
+                    const cnt = getOptCount();
+                    const row = document.createElement('div');
+                    row.className = 'option-row';
+                    row.innerHTML =
+                        `<span class="opt-label">${String.fromCharCode(65+cnt)}</span><input type="text" class="option-input" data-index="${cnt}" placeholder="Option ${String.fromCharCode(65+cnt)}…"><input type="radio" name="correctOption" value="${cnt}"><button type="button" class="btn btn-xs btn-danger remove-option-btn" data-index="${cnt}">✕</button>`;
+                    optContainer.appendChild(row);
+                    updateRemoveBtns();
+                    row.querySelector('.remove-option-btn').onclick = () => { row.remove();
+                        reindexOptions();
+                        updateRemoveBtns(); };
+                };
+                optContainer.querySelectorAll('.remove-option-btn').forEach(b => b.onclick = function() { this.closest(
+                        '.option-row').remove();
+                    reindexOptions();
+                    updateRemoveBtns(); });
+
+                function reindexOptions() {
+                    const rows = optContainer.querySelectorAll('.option-row');
+                    rows.forEach((row, i) => { row.querySelector('.opt-label').textContent = String.fromCharCode(65 +
+                            i);
+                        row.querySelector('.option-input').setAttribute('data-index', i);
+                        row.querySelector('.option-input').placeholder =
+                            `Option ${String.fromCharCode(65+i)}…`;
+                        row.querySelector('input[type="radio"]').value = i;
+                        const rb = row.querySelector('.remove-option-btn'); if (rb) rb.setAttribute('data-index',
+                            i); });
+                    updateRemoveBtns();
+                }
+                btnAddRef.onclick = () => {
+                    const cnt = getRefCount();
+                    const entry = document.createElement('div');
+                    entry.className = 'ref-entry';
+                    entry.setAttribute('data-ref-index', cnt);
+                    entry.innerHTML =
+                        `<span class="ref-num-label">[${cnt+1}]</span><input type="text" class="ref-title-input" placeholder="Title"><input type="text" class="ref-url-input" placeholder="URL"><input type="text" class="ref-desc-input" placeholder="Description"><button type="button" class="btn btn-xs btn-danger remove-ref-btn" data-index="${cnt}">✕</button>`;
+                    const placeholder = refContainer.querySelector('p');
+                    if (placeholder) placeholder.remove();
+                    refContainer.appendChild(entry);
+                    refreshInsertRefBtns();
+                    entry.querySelector('.remove-ref-btn').onclick = () => { entry.remove();
+                        reindexRefs();
+                        refreshInsertRefBtns(); if (refContainer.querySelectorAll('.ref-entry').length === 0 &&
+                            !refContainer.querySelector('p')) { const p = document.createElement('p');
+                            p.style.cssText = 'color:var(--text2);font-size:0.8rem;';
+                            p.textContent = 'No references added.';
+                            refContainer.appendChild(p); } };
+                };
+                refContainer.querySelectorAll('.remove-ref-btn').forEach(b => b.onclick = function() { this.closest(
+                        '.ref-entry').remove();
+                    reindexRefs();
+                    refreshInsertRefBtns(); if (refContainer.querySelectorAll('.ref-entry').length === 0 && !
+                        refContainer.querySelector('p')) { const p = document.createElement('p');
+                        p.style.cssText = 'color:var(--text2);font-size:0.8rem;';
+                        p.textContent = 'No references added.';
+                        refContainer.appendChild(p); } });
+
+                function reindexRefs() {
+                    refContainer.querySelectorAll('.ref-entry').forEach((entry, i) => { entry.setAttribute(
+                            'data-ref-index', i);
+                        entry.querySelector('.ref-num-label').textContent = `[${i+1}]`;
+                        const rb = entry.querySelector('.remove-ref-btn'); if (rb) rb.setAttribute('data-index',
+                        i); });
+                }
+                btnCancel.onclick = closeModal;
+                btnSave.onclick = async () => {
+                    const examName = formExam.value.trim(),
+                        year = parseInt(document.getElementById('formYear').value),
+                        questionType = formType.value;
+                    const question = document.getElementById('formQuestion').value.trim(),
+                        solution = formSol.value.trim(),
+                        explanation = formExpl.value.trim();
+                    if (!examName) { showToast('⚠️ Enter exam name'); return; } if (!year || isNaN(year)) { showToast(
+                            '⚠️ Enter valid year'); return; } if (!question) { showToast('⚠️ Enter question'); return; }
+                    let options = [],
+                        correctOptionIndex = 0;
+                    if (questionType === 'MCQ') {
+                        optContainer.querySelectorAll('.option-input').forEach(inp => options.push(inp.value.trim()));
+                        if (options.length < 2) { showToast('⚠️ At least 2 options required'); return; } if (options.some(
+                                o => !o)) { showToast('⚠️ Fill all options'); return; }
+                        const correctRadio = optContainer.querySelector('input[name="correctOption"]:checked');
+                        correctOptionIndex = correctRadio ? parseInt(correctRadio.value) : 0;
+                    }
+                    const refs = [];
+                    refContainer.querySelectorAll('.ref-entry').forEach(entry => { const t = entry.querySelector(
+                            '.ref-title-input')?.value?.trim() || '', u = entry.querySelector('.ref-url-input')
+                            ?.value?.trim() || '', d = entry.querySelector('.ref-desc-input')?.value?.trim() || '';
+                        if (t || u || d) refs.push({ title: t, url: u, description: d }); });
+                    const qData = { examName, year, questionType, question, options, correctOptionIndex, solution,
+                        explanation, references: refs, createdAt: data.createdAt || new Date().toISOString() };
+                    try {
+                        if (editingQuestionId) updateQuestion(editingQuestionId, qData);
+                        else addQuestion(qData);
+                        showToast('✅ Saved');
+                        closeModal();
+                        refreshSidebar();
+                        loadQuestions(currentPage);
+                    } catch (e) { console.error(e);
+                        showToast('❌ Error saving'); }
+                };
+                updateRemoveBtns();
+                refreshInsertRefBtns();
+                toggleOptionsVisibility();
+            }
+
+            async function populateExamSuggestions() {
+                const datalist = document.getElementById('examSuggestions');
+                if (!datalist) return;
+                const groups = getExamYearGroups();
+                datalist.innerHTML = '';
+                new Set(groups.map(g => g.examName)).forEach(n => { const o = document.createElement('option');
+                    o.value = n;
+                    datalist.appendChild(o); });
+            }
+
+            // ==================== EXPORT / IMPORT ====================
+            function exportJSON() {
+                if (!isAdmin) return;
+                if (!questions.length) { showToast('No questions to export'); return; }
+                const json = JSON.stringify(questions, null, 2);
+                const blob = new Blob([json], { type: 'application/json' });
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = `pyq-bank-export-${new Date().toISOString().slice(0,10)}.json`;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                showToast(`📥 Exported ${questions.length} questions. Re-upload this file to your GitHub repository.`);
+            }
+
+            function importJSON(file) {
+                if (!isAdmin) return;
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        if (!Array.isArray(data)) throw new Error('Invalid format');
+                        if (!data.length) { showToast('Empty file'); return; }
+                        if (!confirm(
+                                `Import ${data.length} questions? This will REPLACE all current questions. Choose "Cancel" to keep existing data.`
+                                )) return;
+                        questions = data;
+                        nextId = getMaxId() + 1;
+                        saveCache();
+                        showToast(`✅ Imported ${data.length} questions`);
+                        refreshSidebar();
+                        loadQuestions(1);
+                    } catch (err) { showToast('❌ Invalid JSON file'); }
+                };
+                reader.readAsText(file);
+            }
+
+            function clearAllData() {
+                if (!isAdmin) return;
+                if (!confirm('⚠️ This will permanently delete ALL questions. Are you sure?')) return;
+                if (!confirm('Final confirmation: Delete everything?')) return;
+                questions = [];
+                nextId = 1;
+                saveCache();
+                localStorage.removeItem(CACHE_KEY);
+                showToast('✅ All data cleared. Don\'t forget to export if you need a backup.');
+                refreshSidebar();
+                loadQuestions(1);
+            }
+
+            // ==================== EVENT LISTENERS ====================
+            document.getElementById('btnCloseModal').addEventListener('click', closeModal);
+            document.getElementById('btnClosePasswordModal').addEventListener('click', closePasswordModal);
+            document.getElementById('btnSubmitPassword').addEventListener('click', submitPassword);
+            document.getElementById('btnAdminLogin').addEventListener('click', () => { if (isAdmin) { logout(); } else {
+                    openPasswordModal(); } });
+            document.getElementById('btnAdminLogout').addEventListener('click', logout);
+            document.getElementById('btnAddQuestion').addEventListener('click', () => openModal('Add Question'));
+            document.getElementById('btnExport').addEventListener('click', exportJSON);
+            document.getElementById('btnImport').addEventListener('click', () => { if (!isAdmin) return;
+                importFileInput.click(); });
+            document.getElementById('btnClearAllData').addEventListener('click', clearAllData);
+            document.getElementById('btnClearFilters').addEventListener('click', () => { setFilter(null, null, null); });
+            filterAll.addEventListener('click', () => setFilter(null, null, null));
+            document.querySelectorAll('.type-item').forEach(el => el.addEventListener('click', (e) => {
+                const type = el.dataset.type;
+                setFilter(currentFilter.examName, currentFilter.year, type);
+            }));
+            importFileInput.addEventListener('change', (e) => { const file = e.target.files[0]; if (file) importJSON(
+                    file);
+                importFileInput.value = ''; });
+
+            const debouncedSearch = debounce(() => {
+                currentSearch = searchInput.value.trim();
+                currentPage = 1;
+                loadQuestions(1);
+            }, 350);
+            searchInput.addEventListener('input', debouncedSearch);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    if (modalOverlay.style.display === 'flex') closeModal();
+                    if (passwordModalOverlay.style.display === 'flex') closePasswordModal();
+                }
+                if (e.ctrlKey && e.shiftKey && e.key === 'F') { e.preventDefault();
+                    searchInput.focus(); }
+                if (e.key === 'Enter' && passwordModalOverlay.style.display === 'flex') { e.preventDefault();
+                    submitPassword(); }
+            });
+
+            // Click outside modal to close
+            modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
+            passwordModalOverlay.addEventListener('click', (e) => { if (e.target === passwordModalOverlay)
+                closePasswordModal(); });
+
+            // Expose functions for inline onclick handlers
+            window._editQuestion = async (id) => { const q = getQuestion(id); if (q) openModal('Edit Question', q);
+                else showToast('Not found'); };
+            window._deleteQuestionConfirm = async (id) => { if (confirm('Delete this question?')) { deleteQuestion(
+                    id);
+                    showToast('Deleted');
+                    refreshSidebar();
+                    loadQuestions(currentPage); } };
+
+            // ==================== INITIALIZATION ====================
+            async function init() {
+                // Check session auth
+                if (checkSessionAuth()) {
+                    isAdmin = true;
+                    document.body.classList.add('admin-authenticated');
+                    adminBadge.style.display = 'inline-flex';
+                } else {
+                    isAdmin = false;
+                    document.body.classList.remove('admin-authenticated');
+                    adminBadge.style.display = 'none';
+                }
+
+                // Load data
+                await loadQuestionsFromJSON();
+                nextId = getMaxId() + 1;
+
+                // Render
+                refreshSidebar();
+                loadQuestions(1);
+
+                console.log(`✅ ${SITE_NAME} initialized. ${questions.length} questions loaded. Admin: ${isAdmin?'Yes':'No'}`);
+                console.log(`ℹ️ Data source: ${DATA_URL}`);
+                if (!isAdmin) {
+                    console.log('🔒 Admin features are hidden. Click the "🔒 Admin" button to unlock.');
+                }
+            }
+
+            init().catch(err => {
+                console.error('Initialization error:', err);
+                questionsContainer.innerHTML =
+                    '<p style="color:var(--danger);text-align:center;padding:40px;">⚠️ Failed to initialize. Please check the console and ensure <code>questions.json</code> is accessible.</p>';
+            });
+        })();
+    </script>
+</body>
+</html>
